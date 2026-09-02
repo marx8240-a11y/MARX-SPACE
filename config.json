@@ -5,6 +5,7 @@
   "walk_speed_px": 2,
   "frame_rate_ms": 100,
   "always_on_top": true,
+  "sticky_all_workspaces": true,
   "behavior_interval": {
     "min_seconds": 3,
     "max_seconds": 8

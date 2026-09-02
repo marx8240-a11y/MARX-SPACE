@@ -22,6 +22,8 @@ class DesktopPet(QWidget):
     def init_ui(self):
         # Frameless, Always on Top, Translucent background
         flags = Qt.WindowType.FramelessWindowHint | Qt.WindowType.SubWindow
+        if self.config.get("sticky_all_workspaces", True):
+            flags |= Qt.WindowType.X11BypassWindowManagerHint
         if self.config.get("always_on_top", True):
             flags |= Qt.WindowType.WindowStaysOnTopHint
 
