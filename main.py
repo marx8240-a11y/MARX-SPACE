@@ -30,6 +30,7 @@ class PetApp:
                 "walk_speed_px": 2,
                 "frame_rate_ms": 100,
                 "always_on_top": True,
+                "sticky_all_workspaces": True,
                 "behavior_interval": {"min_seconds": 3, "max_seconds": 8}
             }
 

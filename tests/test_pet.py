@@ -70,6 +70,7 @@ def test_desktop_pet_window(qapp):
     config = {
         "pet_name": "TestMascot",
         "always_on_top": True,
+        "sticky_all_workspaces": True,
         "sprite_scale": 1.0
     }
     sm = SpriteManager()
@@ -77,6 +78,7 @@ def test_desktop_pet_window(qapp):
 
     assert pet.windowTitle() == "TestMascot"
     assert pet.testAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+    assert bool(pet.windowFlags() & Qt.WindowType.X11BypassWindowManagerHint)
 
     pet.set_state("walk_right")
     assert pet.current_state == "walk_right"
